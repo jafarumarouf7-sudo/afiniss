@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afinialdiacaribe | Siembra de Árboles y Ahorro de Energía</title>
+    
+    <meta name="description" content="Iniciativa ecológica en la costa caribe colombiana. Plantamos árboles estratégicamente para generar sombra, reducir la temperatura y mejorar el ahorro de energía con responsabilidad.">
+    <meta name="keywords" content="siembra de árboles caribe, ahorro de energía, reforestación colombia, sombra de árboles, ecología caribe, afinialdiacaribe">
+    <meta name="author" content="LUIS ENRIQUE MORALES GOMEZ">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="afinialdiacaribe | Sombra y Ahorro de Energía">
+    <meta property="og:description" content="Mejora tu ahorro de energía a través de la siembra estratégica de árboles en la zona caribe colombiana.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        /* Variables y Configuración Base */
+        :root {
+            --primary-color: #2e7d32; /* Verde bosque */
+            --secondary-color: #fbc02d; /* Amarillo sol */
+            --dark-color: #1b5e20;
+            --text-color: #333333;
+            --light-bg: #f1f8e9;
+            --white: #ffffff;
+            --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        /* Utilidades */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-cta:hover {
+            background-color: #f9a825;
+            transform: translateY(-2px);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(27, 94, 32, 0.9)), url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: var(--white);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--dark-color);
+            margin-bottom: 50px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .benefit-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Services / Value Prop */
+        .value-prop {
+            padding: 80px 0;
+        }
+
+        .value-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .value-text {
+            flex: 1;
+        }
+
+        .value-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Social Proof (Factual data instead of fake reviews) */
+        .social-proof {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section & Company Info */
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-info h3, .contact-form h3 {
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--primary-color);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .value-content { flex-direction: column; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .header-content { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">afinialdiacaribe</a>
+            <nav>
+                <ul>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#metodo">Nuestro Método</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Sombra Natural, Ahorro Real en el Caribe</h1>
+            <p>Fomentamos la siembra estratégica y responsable de árboles en la zona Caribe colombiana. Reducimos la temperatura de tu entorno para optimizar el consumo de energía eléctrica.</p>
+            <a href="#contacto" class="btn-cta">Solicita Asesoría para tu Siembra</a>
+        </div>
+    </section>
+
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <h2 class="section-title">¿Por qué plantar árboles de forma estratégica?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Reducción Térmica</h3>
+                    <p>La sombra directa sobre techos y paredes bloquea la radiación solar, disminuyendo significativamente la temperatura interior de las edificaciones en las zonas calurosas del Caribe.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Eficiencia Energética</h3>
+                    <p>Al mantener los espacios más frescos de forma natural, los aires acondicionados y ventiladores trabajan menos, lo que se traduce en un ahorro tangible en la factura de energía.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Responsabilidad Ecológica</h3>
+                    <p>Utilizamos especies nativas que requieren poca agua y no dañan infraestructuras, aportando al ecosistema local y mejorando la calidad del aire sin riesgos a largo plazo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodo" class="value-prop container">
+        <h2 class="section-title">Nuestra Propuesta de Valor</h2>
+        <div class="value-content">
+            <div class="value-text">
+                <p><strong>Planificación Técnica:</strong> No se trata solo de plantar. Evaluamos la trayectoria del sol, las distancias de seguridad con el cableado eléctrico y las tuberías para asegurar que el crecimiento del árbol sea seguro y beneficioso.</p>
+                <p><strong>Enfoque en la Costa Caribe:</strong> Entendemos el clima, los suelos y las necesidades específicas de la región. Nuestro objetivo es mitigar el impacto de las altas temperaturas que exigen un alto consumo energético en la zona.</p>
+                <p><strong>Transparencia Total:</strong> Te asesoramos de manera clara sobre qué especies plantar, los tiempos de crecimiento y el impacto real esperado en tu confort térmico.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <div class="container">
+            <h2>El Impacto de la Naturaleza</h2>
+            <p>Datos técnicos sobre la reforestación urbana y el control térmico</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h4>Hasta 5°C</h4>
+                    <p>Reducción de temperatura ambiente bajo un dosel denso</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Especies Nativas</h4>
+                    <p>Adaptadas al estrés hídrico de la región caribeña</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Climatización</h4>
+                    <p>Complemento natural perfecto para sistemas de enfriamiento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Inicia tu Proyecto de Siembra</h2>
+            <div class="contact-grid">
+                
+                <div class="contact-info">
+                    <h3>Información de Contacto y Transparencia</h3>
+                    <p style="margin-bottom: 20px;">Estamos legalmente constituidos y dispuestos a brindarte toda la información que necesites para llevar a cabo una siembra responsable.</p>
+                    
+                    <div class="info-item">
+                        <strong>Representante:</strong>
+                        <span>LUIS ENRIQUE MORALES GOMEZ</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Correo Electrónico:</strong>
+                        <span><a href="mailto:gorbydrew@gmail.com" style="color: inherit; text-decoration: none;">gorbydrew@gmail.com</a></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Teléfono de Atención:</strong>
+                        <span>3002144123</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Dirección Física:</strong>
+                        <span>Cra. 25 #27-69, Paipa, Boyacá, 150440, Colombia</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Horario de Atención:</strong>
+                        <span>Todos los días de la semana de 8:00 am a 5:00 pm</span>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form id="leadForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Número de Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">¿En qué zona deseas plantar y cuáles son tus dudas?</label>
+                            <textarea id="mensaje" name="mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-cta" style="width: 100%;">Solicitar Asesoría</button>
+                        <p id="formResponse" style="display: none; margin-top: 15px; color: var(--primary-color); font-weight: bold; text-align: center;"></p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="politica-de-privacidad.html">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+            </div>
+            <p>&copy; 2026 afinialdiacaribe. Operado por LUIS ENRIQUE MORALES GOMEZ. Todos los derechos reservados.</p>
+            <p style="font-size: 0.85rem; margin-top: 10px; color: #aaa;">Esta iniciativa promueve la ecología y el ahorro energético. No somos proveedores de servicios públicos ni pretendemos suplantar a empresas de energía.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Form submission logic (Client-side simulation)
+            const form = document.getElementById('leadForm');
+            const responseMsg = document.getElementById('formResponse');
+
+            if(form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Evita la recarga para demostración
+                    // Aquí iría la integración real con tu backend o Google Tag Manager
+                    
+                    responseMsg.style.display = 'block';
+                    responseMsg.textContent = '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto para asesorarte con tu siembra.';
+                    form.reset();
+                    
+                    setTimeout(() => {
+                        responseMsg.style.display = 'none';
+                    }, 5000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
